@@ -105,8 +105,8 @@ body {
 }
 
 .hero-buttons {
-    display: flex;
-    gap: 40%;
+    display: inline-flex;
+    gap: 1rem;
 }
 
 .cta-btn {
@@ -320,7 +320,7 @@ h2::after {
 }
 
 .project-tags {
-    display: flex;
+    display: grid;
     gap: 0.5rem;
     margin-bottom: 1rem;
 }
@@ -717,106 +717,6 @@ h2::after {
     background: #64ffda;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .cert-card {
-        padding: 1.5rem;
-        max-width: 100%;
-    }
-
-    .cert-card h3 {
-        font-size: 1.5rem;
-    }
-
-    .cert-meta {
-        font-size: 0.9rem;
-    }
-
-    .cert-card p {
-        font-size: 0.9rem;
-        margin-bottom: 1rem;
-    }
-
-    .cert-skills span {
-        font-size: 0.8rem;
-        padding: 0.4rem 0.8rem;
-    }
-
-    .cert-link {
-        padding: 0.4rem 1.2rem;
-        font-size: 0.9rem;
-    }
-
-    .cert-nav {
-        gap: 0.8rem;
-    }
-
-    .cert-nav span {
-        font-size: 0.9rem;
-    }
-
-    .nav-arrow {
-        font-size: 1rem;
-    }
-
-    .dot {
-        width: 7px;
-        height: 7px;
-        margin: 0 0.2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .cert-card {
-        padding: 1rem;
-    }
-
-    .cert-card h3 {
-        font-size: 1.3rem;
-    }
-
-    .cert-meta {
-        font-size: 0.8rem;
-    }
-
-    .cert-card p {
-        font-size: 0.8rem;
-        margin-bottom: 0.8rem;
-    }
-
-    .cert-skills {
-        gap: 0.4rem;
-        margin-bottom: 1rem;
-    }
-
-    .cert-skills span {
-        font-size: 0.7rem;
-        padding: 0.3rem 0.6rem;
-    }
-
-    .cert-link {
-        padding: 0.3rem 1rem;
-        font-size: 0.8rem;
-    }
-
-    .cert-nav {
-        gap: 0.5rem;
-    }
-
-    .cert-nav span {
-        font-size: 0.8rem;
-    }
-
-    .nav-arrow {
-        font-size: 0.9rem;
-    }
-
-    .dot {
-        width: 6px;
-        height: 6px;
-        margin: 0 0.15rem;
-    }
-}
 /* Contact */
 .contact-container {
     display: flex;
