@@ -37,7 +37,7 @@ portfolio-site
 To get started with the portfolio site, clone the repository.
 
 ```bash
-git clone "repo-link"
+git clone https://github.com/Blessed-Shammah/bleportfolio.git
 ```
 
 Open `src/index.html` in your browser to view the portfolio.

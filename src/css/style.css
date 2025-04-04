@@ -427,40 +427,54 @@ h2::after {
 /* Experience */
 .exp-timeline {
     position: relative;
-    padding-left: 1rem;
+    padding-left: 0;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .exp-item {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    position: reslative;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    align-items: flex-start;
 }
 
 .exp-company {
-    flex: 0 0 150px;
+    flex: 0 0 200px;
     color: #64ffda;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-left: 2px solid #64ffda;
+    padding-left: 1rem;
 }
 
 .exp-details {
     flex: 1;
     background: #112240;
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: 10px;
     border: 1px solid rgba(100, 255, 218, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.exp-details:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.2);
 }
 
 .exp-details h3 {
     color: #ccd6f6;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 0.5rem;
 }
 
 .exp-meta {
     color: #8892b0;
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-bottom: 1rem;
+    font-style: italic;
 }
 
 .exp-details ul {
@@ -470,8 +484,9 @@ h2::after {
 .exp-details li {
     position: relative;
     padding-left: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: #8892b0;
+    margin-bottom: 0.8rem;
+    color: #ccd6f6;
+    line-height: 1.6;
 }
 
 .exp-details li::before {
@@ -479,6 +494,7 @@ h2::after {
     color: #64ffda;
     position: absolute;
     left: 0;
+    font-size: 1.2rem;
 }
 
 /* Certificates */
