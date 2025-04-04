@@ -1,47 +1,15 @@
-# Portfolio Site
+# My Portfolio
 
-Welcome to my portfolio site! This project showcases my work as a software engineer and serves as a platform to highlight my skills, projects, and credentials.
+This is my personal portfolio website, showcasing my skills, projects, and experience as a software engineer. Built with HTML, CSS, and JavaScript, and deployed on GitHub Pages.
 
-## Project Structure
-
-The portfolio is organized as follows:
-
-```
-portfolio-site
-├── src
-│   ├── index.html          
-│   ├── css
-│   │   ├── style.css       
-│   ├── js
-│   │   └──  script.js      
-│   └── assets
-│       └── cirtificates
-│       └── icons 
-│       └── icons 
-│       └── images
-│       └── resume         
-└── README.md            
-```
+## Live Site
+[Visit my portfolio](https://blessed-shammah.github.io/bleportfolio/src/)
 
 ## Features
+- Responsive design
+- Animated sections
+- Projects, skills, experience, and contact sections
 
-- **Responsive Design**: The portfolio is designed to be fully responsive, ensuring a seamless experience across all devices.
-- **Dynamic Content**: Easily update the projects section to showcase new work.
-- **Certificates Section**: Display images of credentials and certificates to highlight achievements.
-- **Inspirational Layout**: The design aims to be professional and engaging, suitable for job selection and hackathons.
-
-## Getting Started
-
-To get started with the portfolio site, clone the repository.
-
-```bash
-git clone https://github.com/Blessed-Shammah/bleportfolio.git
-```
-
-Open `src/index.html` in your browser to view the portfolio.
-
-Experience Live site here https://blessed-shammah.github.io/bleportfolio/src/
-
-## License
-
-This project is licensed under the MIT License. Feel free to use and modify it as needed.
+## How to Run Locally
+1. Clone the repository: `git clone https://github.com/Blessed-Shammah/bleportfolio.git`
+2. Open `index.html` in a browser.
