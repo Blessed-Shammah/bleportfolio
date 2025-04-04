@@ -1,5 +1,3 @@
-# README.md
-
 # Portfolio Site
 
 Welcome to my portfolio site! This project showcases my work as a software engineer and serves as a platform to highlight my skills, projects, and credentials.
@@ -41,6 +39,8 @@ git clone https://github.com/Blessed-Shammah/bleportfolio.git
 ```
 
 Open `src/index.html` in your browser to view the portfolio.
+
+Experience Live site here https://blessed-shammah.github.io/bleportfolio/src/
 
 ## License
 
