@@ -56,6 +56,48 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     document.querySelectorAll('.animate-on-scroll').forEach(el => reveal.observe(el));
 
+    /* ---- Inject cover images + Request Demo CTAs ---- */
+    const slugMap = {
+        'AssetFlow RFID Asset Tracking Platform': 'assetflow',
+        'Cultiva Restaurant Inventory System': 'cultiva',
+        'GlobalTradeIndiaExpo.com': 'globaltrade',
+        'ScanTechInnovations.africa': 'scantech',
+        'AI-Powered Customer Service Chatbot': 'chatbot',
+        'Safaricom RFID Network Scanner': 'safaricom',
+        'UNICEF Uganda RFID Asset Tracking': 'unicef',
+        'National Parents Association': 'npa',
+        'TREQ B2B Trade App': 'treq',
+        'MCHAMA — Group Savings App': 'mchama',
+        'Unified Events App': 'unifiedevents',
+        'Crypto Merchant Bot': 'crypto'
+    };
+    document.querySelectorAll('.project-card').forEach(card => {
+        const name = card.querySelector('.project-name')?.textContent.trim();
+        const slug = slugMap[name];
+        if (slug) {
+            const cover = document.createElement('div');
+            cover.className = 'project-cover';
+            cover.innerHTML = `<img src="assets/images/covers/${slug}.svg" alt="${name} cover" loading="lazy">`;
+            card.prepend(cover);
+        }
+        // Client/enterprise projects (case-study links, no public site) get a demo CTA.
+        const primary = card.querySelector('.project-link');
+        if (primary && primary.getAttribute('href').startsWith('case-study')) {
+            const demo = document.createElement('a');
+            demo.className = 'project-link demo-link';
+            demo.href = `index.html?subject=${encodeURIComponent('Demo request: ' + name)}#contact`;
+            demo.textContent = 'Request Demo';
+            card.querySelector('.project-links').appendChild(demo);
+        }
+    });
+
+    /* ---- Prefill contact subject from ?subject= (Request Demo) ---- */
+    const presubject = new URLSearchParams(location.search).get('subject');
+    if (presubject) {
+        const sf = document.querySelector('#contactForm [name="subject"]');
+        if (sf) sf.value = presubject;
+    }
+
     /* ---- Project filtering ---- */
     const filterBtns = document.querySelectorAll('.filter-btn');
     const cards = document.querySelectorAll('.project-card');

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Parents Assoc.">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a855f7"/>
+      <stop offset="1" stop-color="#ec4899"/>
+    </linearGradient>
+    <radialGradient id="r" cx="0.8" cy="0.15" r="0.9">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="34" height="34" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="2" fill="#ffffff" fill-opacity="0.10"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="675" fill="url(#g)"/>
+  <rect width="1200" height="675" fill="url(#dots)"/>
+  <rect width="1200" height="675" fill="url(#r)"/>
+  <circle cx="980" cy="120" r="220" fill="#ffffff" fill-opacity="0.06"/>
+  <circle cx="1080" cy="560" r="160" fill="#0b1020" fill-opacity="0.10"/>
+  <path d="M0 540 Q 300 470 600 540 T 1200 540 V675 H0 Z" fill="#0b1020" fill-opacity="0.16"/>
+  <text x="70" y="300" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="240" font-weight="800" fill="#ffffff" fill-opacity="0.16">NP</text>
+  <text x="74" y="500" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="72" font-weight="800" fill="#ffffff">Parents Assoc.</text>
+  <g>
+    <rect x="74" y="548" rx="20" ry="20" width="204" height="44" fill="#0b1020" fill-opacity="0.28"/>
+    <text x="98" y="577" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="24" font-weight="600" fill="#ffffff" fill-opacity="0.92">Web · M-Pesa</text>
+  </g>
+  <text x="1126" y="612" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff" fill-opacity="0.85">Blessed Shammah</text>
+</svg>

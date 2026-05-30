@@ -64,6 +64,7 @@
             document.title = p.title + ' — Blessed Shammah';
 
             var html = '<a class="cs-back" href="index.html#projects">← Back to projects</a>';
+            html += '<div class="cs-cover"><img src="assets/images/covers/' + esc(id) + '.svg" alt="' + esc(p.title) + ' cover"></div>';
             html += '<div class="cs-meta"><span class="cs-badge">' + esc(p.badge) + '</span>' +
                     '<span class="cs-year">' + esc(p.year) + '</span></div>';
             html += '<h1 class="cs-title">' + esc(p.title) + '</h1>';
@@ -87,7 +88,9 @@
                 html += '</section>';
             });
 
-            html += '<div class="cs-cta"><a class="btn btn-primary" href="index.html#contact">Work With Me</a>';
+            var demoHref = 'index.html?subject=' + encodeURIComponent('Demo request: ' + p.title) + '#contact';
+            html += '<div class="cs-cta"><a class="btn btn-primary" href="' + demoHref + '">Request a Demo</a>';
+            html += '<a class="btn btn-ghost" href="index.html#contact">Work With Me</a>';
             if (p.link) html += '<a class="btn btn-ghost" href="' + esc(p.link.url) + '" target="_blank" rel="noopener">' + esc(p.link.label) + '</a>';
             html += '<a class="btn btn-ghost" href="index.html#projects">All Projects</a></div>';
 
