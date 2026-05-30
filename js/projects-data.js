@@ -125,8 +125,8 @@ window.PROJECTS = {
         badge: "Project",
         year: "2024",
         link: null,
-        lead: "A cross-platform mobile application for a global trade alliance, connecting buyers and exporters with real-time chat and push notifications to power B2B matching on the go.",
-        tags: ["React Native", "TypeScript", "Expo", "Real-time Chat", "Push Notifications"],
+        lead: "A cross-platform Flutter application for a global trade alliance, connecting buyers and exporters with real-time chat and push notifications to power B2B matching on the go.",
+        tags: ["Flutter", "Dart", "REST API", "Real-time Chat", "Push Notifications"],
         metrics: [
             { value: "Cross-platform", label: "iOS & Android" },
             { value: "Real-time", label: "Buyer–exporter chat" },
@@ -135,12 +135,58 @@ window.PROJECTS = {
         blocks: [
             { h: "Overview", p: ["International trade depends on fast, trusted communication between buyers and exporters. TREQ brings that connection into a single mobile app, matching parties and enabling instant conversation wherever they are."] },
             { h: "What I Built", list: [
-                "A cross-platform React Native (TypeScript, Expo) app targeting both iOS and Android from one codebase.",
+                "A cross-platform Flutter (Dart) app targeting both iOS and Android from one codebase.",
                 "Real-time chat connecting buyers and exporters directly.",
                 "Push notifications keeping users responsive to new matches and messages.",
                 "A clean, mobile-first UX tailored to B2B trade workflows."
             ] },
             { h: "Outcome", p: ["TREQ demonstrates end-to-end mobile product capability — from architecture to real-time features — for a real international trade use case."] }
+        ]
+    },
+    mchama: {
+        title: "MCHAMA — Group Savings App",
+        badge: "Project",
+        year: "2024",
+        link: null,
+        lead: "A Flutter mobile app for chamas — Kenyan investment and savings groups — that manages member contributions, payouts, and secure transactions on a Node.js/Express backend with OAuth2 authentication.",
+        tags: ["Flutter", "Dart", "Node.js", "Express", "OAuth2", "Secure Transactions"],
+        metrics: [
+            { value: "Cross-platform", label: "iOS & Android" },
+            { value: "OAuth2", label: "Secure authentication" },
+            { value: "Real-time", label: "Contribution tracking" }
+        ],
+        blocks: [
+            { h: "Overview", p: ["Chamas (group savings and investment circles) are central to community finance in Kenya, but most still run on manual records. MCHAMA digitizes the whole flow — contributions, payouts, and member accountability — in a mobile-first app."] },
+            { h: "What I Built", list: [
+                "A cross-platform Flutter (Dart) app for members to track contributions and payouts.",
+                "A Node.js/Express backend handling secure transaction processing.",
+                "OAuth2 authentication protecting member accounts and financial data.",
+                "A financial dashboard giving groups clear visibility over balances and activity."
+            ] },
+            { h: "Outcome", p: ["MCHAMA shows full-stack mobile delivery — Flutter front end, secure Node backend — applied to a real fintech use case rooted in the local community."] }
+        ]
+    },
+    unifiedevents: {
+        title: "Unified Events App",
+        badge: "Project",
+        year: "2024",
+        link: null,
+        lead: "A Flutter app for discovering, organizing, and managing events — bringing registration, scheduling, and real-time notifications into one unified mobile experience.",
+        tags: ["Flutter", "Dart", "REST API", "Push Notifications"],
+        metrics: [
+            { value: "Cross-platform", label: "iOS & Android" },
+            { value: "Real-time", label: "Event notifications" },
+            { value: "All-in-one", label: "Discover & manage" }
+        ],
+        blocks: [
+            { h: "Overview", p: ["Event-goers and organizers usually juggle several disconnected tools. Unified Events brings discovery, registration, and scheduling together in a single Flutter app for a smoother experience on both sides."] },
+            { h: "What I Built", list: [
+                "A cross-platform Flutter (Dart) app for browsing and registering for events.",
+                "Scheduling and agenda features for attendees.",
+                "Real-time push notifications for event updates and reminders.",
+                "A clean, unified mobile UX across iOS and Android."
+            ] },
+            { h: "Outcome", p: ["Unified Events rounds out a strong Flutter portfolio, demonstrating consumer-facing mobile product design alongside B2B and fintech apps."] }
         ]
     }
 };
