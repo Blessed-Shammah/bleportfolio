@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Curriculum — Blessed Shammah</title>
+    <meta name="description" content="Course curriculum — hands-on, project-based training by Blessed Shammah.">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        (function () {
+            var t = localStorage.getItem('theme');
+            if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <a class="nav-brand" href="index.html">BS<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle theme">
+            <span class="icon-moon">🌙</span><span class="icon-sun">☀️</span>
+        </button>
+    </nav>
+
+    <main class="cs-main" id="course"></main>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Blessed Shammah</h3>
+            <p>Full-Stack Developer &amp; RFID Systems Architect — building production systems and training the next generation of developers.</p>
+            <p class="footer-copy">© 2026 Blessed Shammah. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/courses-data.js"></script>
+    <script>
+        (function () {
+            var id = new URLSearchParams(location.search).get('id');
+            var c = window.COURSES && window.COURSES[id];
+            var root = document.getElementById('course');
+            var esc = function (s) {
+                return String(s).replace(/[&<>"']/g, function (ch) {
+                    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch];
+                });
+            };
+
+            if (!c) {
+                root.innerHTML =
+                    '<a class="cs-back" href="index.html#services">← Back to services</a>' +
+                    '<div class="cs-not-found"><h1 class="cs-title">Course not found</h1>' +
+                    '<p class="cs-lead">This curriculum doesn\'t exist yet. Head back to explore the courses on offer.</p>' +
+                    '<a class="btn btn-primary" href="index.html#services">View all courses</a></div>';
+                return;
+            }
+
+            document.title = c.title + ' — Course Curriculum';
+            var enrollHref = 'index.html?subject=' + encodeURIComponent('Course enrollment: ' + c.title) + '#contact';
+
+            var html = '<a class="cs-back" href="index.html#services">← Back to services</a>';
+            html += '<div class="cs-meta"><span class="cs-badge">Course</span><span class="cs-year">' + esc(c.duration) + '</span></div>';
+            html += '<h1 class="cs-title">' + esc(c.title) + '</h1>';
+            html += '<p class="cs-lead">' + esc(c.tagline) + '</p>';
+
+            html += '<div class="course-meta">' +
+                '<span>⏱ ' + esc(c.duration) + '</span>' +
+                '<span>🎯 ' + esc(c.level) + '</span>' +
+                '<span>💻 ' + esc(c.format) + '</span>' +
+                '<span class="course-price">💰 ' + esc(c.price) + '</span>' +
+                '</div>';
+
+            html += '<div class="cs-cta" style="border:none;padding-top:0;margin-bottom:1rem;">' +
+                '<a class="btn btn-primary" href="' + enrollHref + '">Enroll Now</a>' +
+                '<a class="btn btn-ghost" href="index.html#contact">Ask a Question</a></div>';
+
+            html += '<section class="cs-block"><h2>What You\'ll Learn</h2><ul>' +
+                c.outcomes.map(function (o) { return '<li>' + esc(o) + '</li>'; }).join('') + '</ul></section>';
+
+            html += '<section class="cs-block"><h2>Curriculum</h2><div class="curriculum">';
+            c.modules.forEach(function (m, i) {
+                html += '<div class="module"><div class="module-head"><span class="module-num">' + (i + 1) + '</span>' +
+                    '<h3>' + esc(m.t) + '</h3></div><ul>' +
+                    m.items.map(function (it) { return '<li>' + esc(it) + '</li>'; }).join('') + '</ul></div>';
+            });
+            html += '</div></section>';
+
+            html += '<section class="cs-block"><h2>Tools &amp; Tech</h2><div class="cs-tags">' +
+                c.tools.map(function (t) { return '<span>' + esc(t) + '</span>'; }).join('') + '</div></section>';
+
+            html += '<div class="cs-cta"><a class="btn btn-primary" href="' + enrollHref + '">Enroll Now</a>' +
+                '<a class="btn btn-ghost" href="index.html#services">All Courses &amp; Services</a></div>';
+
+            root.innerHTML = html;
+        })();
+
+        document.getElementById('themeToggle')?.addEventListener('click', function () {
+            var root = document.documentElement;
+            var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            root.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        });
+    </script>
+</body>
+</html>

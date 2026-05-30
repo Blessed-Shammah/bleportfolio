@@ -569,6 +569,67 @@ body, .navbar, .surface, .stat, .project-card, .skill-group,
     transition: background 0.22s, color 0.22s;
 }
 .service-cta:hover { background: var(--accent); color: var(--btn-ink); }
+.svc-curriculum {
+    display: block;
+    text-align: center;
+    margin-bottom: 0.65rem;
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.svc-curriculum:hover { color: var(--accent); }
+
+/* ---------- Course curriculum page ---------- */
+.course-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 0 0 1.6rem;
+}
+.course-meta span {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+}
+.course-meta .course-price { color: var(--accent); border-color: var(--accent); font-weight: 600; }
+.curriculum {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+}
+.module {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.3rem;
+    transition: border-color 0.25s, transform 0.25s;
+}
+.module:hover { border-color: var(--border-2); transform: translateY(-3px); }
+.module-head { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.8rem; }
+.module-num {
+    flex: none;
+    width: 32px; height: 32px;
+    display: grid; place-items: center;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: var(--btn-ink);
+    border-radius: 9px;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+.module-head h3 { font-family: var(--font-head); font-size: 1.05rem; }
+.module ul { display: grid; gap: 0.4rem; }
+.module li {
+    font-size: 0.88rem;
+    color: var(--text-dim);
+    padding-left: 1.2rem;
+    position: relative;
+}
+.module li::before { content: '▹'; position: absolute; left: 0; color: var(--accent); }
 
 /* ---------- Skills ---------- */
 .skills-grid {
