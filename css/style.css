@@ -259,7 +259,7 @@ body, .navbar, .surface, .stat, .project-card, .skill-group,
 }
 .hero-stats {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 1rem;
     opacity: 0;
     animation: fadeUp 0.6s 0.5s var(--ease) forwards;
