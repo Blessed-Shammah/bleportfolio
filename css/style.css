@@ -501,6 +501,75 @@ body, .navbar, .surface, .stat, .project-card, .skill-group,
 }
 .view-all-btn:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-3px); }
 
+/* ---------- Services & Pricing ---------- */
+.svc-subhead {
+    font-family: var(--font-head);
+    font-size: 1.25rem;
+    margin: 0.5rem 0 1.2rem;
+    padding-left: 0.9rem;
+    border-left: 3px solid var(--accent);
+}
+.svc-subhead:not(:first-of-type) { margin-top: 2.6rem; }
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.2rem;
+}
+.service-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+.service-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 16px 36px var(--shadow);
+}
+.service-icon {
+    font-size: 2rem;
+    width: 56px; height: 56px;
+    display: grid; place-items: center;
+    background: var(--accent-soft);
+    border-radius: 14px;
+    margin-bottom: 1rem;
+}
+.service-card h4 { font-family: var(--font-head); font-size: 1.1rem; margin-bottom: 0.5rem; }
+.service-card p { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 1.1rem; }
+.service-price {
+    font-family: var(--font-head);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-top: auto;
+    margin-bottom: 1rem;
+}
+.service-price span {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-mut);
+}
+.service-price small { font-size: 0.82rem; font-weight: 500; color: var(--text-mut); }
+.service-cta {
+    display: inline-block;
+    text-align: center;
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.22s, color 0.22s;
+}
+.service-cta:hover { background: var(--accent); color: var(--btn-ink); }
+
 /* ---------- Skills ---------- */
 .skills-grid {
     display: grid;
