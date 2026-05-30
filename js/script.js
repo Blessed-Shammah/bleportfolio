@@ -69,7 +69,22 @@ document.addEventListener('DOMContentLoaded', () => {
         'TREQ B2B Trade App': 'treq',
         'MCHAMA — Group Savings App': 'mchama',
         'Unified Events App': 'unifiedevents',
-        'Crypto Merchant Bot': 'crypto'
+        'Crypto Merchant Bot': 'crypto',
+        'RFID Microservices Platform': 'rfidmicro',
+        'Tyre Management System': 'tyre',
+        'Biometric Authentication System': 'biometric',
+        'Football Bet Predictions': 'bets',
+        'Image to Text — OCR': 'image2text-app',
+        'Music Chat Bot': 'musicbot',
+        'FileVault — File Sharing': 'filevault',
+        'NairobiLive': 'nairobilive',
+        'FestiveFinder': 'festivefinder',
+        'Sharn Nails & Beauty': 'shazbeauty',
+        'Velvet Reserve': 'velvet',
+        'React Playground': 'playground',
+        'Electronics Store': 'electronics',
+        'Barber.shop Booking': 'barber',
+        'Ayman Global Connect': 'ayman'
     };
     document.querySelectorAll('.project-card').forEach(card => {
         const name = card.querySelector('.project-name')?.textContent.trim();

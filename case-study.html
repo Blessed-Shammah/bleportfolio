@@ -97,6 +97,7 @@
             var demoHref = 'index.html?subject=' + encodeURIComponent('Demo request: ' + p.title) + '#contact';
             html += '<div class="cs-cta"><a class="btn btn-primary" href="' + demoHref + '">Request a Demo</a>';
             html += '<a class="btn btn-ghost" href="index.html#contact">Work With Me</a>';
+            if (p.slides) html += '<a class="btn btn-ghost" href="' + esc(p.slides) + '" target="_blank" rel="noopener">View Slides</a>';
             if (p.link) html += '<a class="btn btn-ghost" href="' + esc(p.link.url) + '" target="_blank" rel="noopener">' + esc(p.link.label) + '</a>';
             html += '<a class="btn btn-ghost" href="index.html#projects">All Projects</a></div>';
 

@@ -6,6 +6,7 @@ window.PROJECTS = {
         badge: "Production",
         year: "2023 – Present",
         link: { label: "View on GitHub", url: "https://github.com/Blessed-Shammah" },
+        slides: "assets/presentations/asset-management-system.pdf",
         lead: "An enterprise-grade passive-RFID asset tracking platform built from concept to production deployment as the flagship product of Amband Limited — now live at Kibabii University and Naivasha Sub-County Referral Hospital.",
         tags: ["Laravel", "Python Flask", "Android (Java)", "MySQL", "Retrofit", "Honeywell RFID SDK", "Snipe-IT", "Docker", "Contabo VPS"],
         metrics: [
@@ -32,6 +33,7 @@ window.PROJECTS = {
         badge: "Production",
         year: "2024 – Present",
         link: null,
+        slides: "assets/presentations/consumables-management.pdf",
         lead: "A specialized inventory-management platform built as an AssetFlow extension for Cultiva Farm, a high-end Kenyan restaurant — combining barcode workflows with an AI chatbot that acts as an intelligent store manager.",
         tags: ["Laravel", "Flutter", "Barcode Integration", "AI Chatbot", "Google Gemini", "Delivery Notes", "Analytics"],
         metrics: [
