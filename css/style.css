@@ -656,6 +656,10 @@ body, .navbar, .surface, .stat, .project-card, .skill-group,
 .contact-form textarea:focus { outline: none; border-color: var(--accent); }
 .contact-form textarea { min-height: 130px; resize: vertical; }
 .contact-form .btn { margin-top: 0.3rem; }
+.contact-form button:disabled { opacity: 0.6; cursor: not-allowed; }
+.form-status { font-size: 0.88rem; margin-top: 0.2rem; min-height: 1.2em; }
+.form-status.success { color: var(--accent); }
+.form-status.error { color: #ff7a7a; }
 
 /* ---------- Footer ---------- */
 footer {

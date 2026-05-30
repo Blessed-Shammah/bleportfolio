@@ -85,6 +85,47 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.5 });
     sections.forEach(s => spy.observe(s));
 
+    /* ---- Contact form (Formspree AJAX) ---- */
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+    form?.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (form.action.includes('YOUR_FORM_ID')) {
+            status.textContent = '⚠️ Form not configured yet — email me at iamblessedshammah@gmail.com.';
+            status.className = 'form-status error';
+            return;
+        }
+        const btn = form.querySelector('button[type="submit"]');
+        const original = btn.textContent;
+        btn.textContent = 'Sending…';
+        btn.disabled = true;
+        status.textContent = '';
+        status.className = 'form-status';
+        try {
+            const res = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { Accept: 'application/json' }
+            });
+            if (res.ok) {
+                form.reset();
+                status.textContent = '✅ Thanks! Your message has been sent — I\'ll get back to you soon.';
+                status.className = 'form-status success';
+            } else {
+                const data = await res.json().catch(() => ({}));
+                status.textContent = data.errors?.map(x => x.message).join(', ')
+                    || '❌ Something went wrong. Please email me directly.';
+                status.className = 'form-status error';
+            }
+        } catch {
+            status.textContent = '❌ Network error. Please email me at iamblessedshammah@gmail.com.';
+            status.className = 'form-status error';
+        } finally {
+            btn.textContent = original;
+            btn.disabled = false;
+        }
+    });
+
     /* ---- Footer year ---- */
     const yr = document.querySelector('.footer-copy');
     if (yr) yr.textContent = `© ${new Date().getFullYear()} Blessed Shammah. All rights reserved.`;

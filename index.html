@@ -272,11 +272,13 @@
                     <a class="social-chip" href="mailto:iamblessedshammah@gmail.com">Email</a>
                 </div>
             </div>
-            <form class="contact-form" action="mailto:iamblessedshammah@gmail.com" method="post" enctype="text/plain">
-                <div class="form-row"><input type="text" placeholder="Your Name" required><input type="email" placeholder="Your Email" required></div>
-                <input type="text" placeholder="Subject" required>
-                <textarea placeholder="Message" required></textarea>
+            <!-- Formspree endpoint -->
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/mdajvnbp" method="POST">
+                <div class="form-row"><input type="text" name="name" placeholder="Your Name" required><input type="email" name="email" placeholder="Your Email" required></div>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" placeholder="Message" required></textarea>
                 <button type="submit" class="btn btn-primary">Send Message</button>
+                <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
             </form>
         </div>
     </section>
