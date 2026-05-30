@@ -84,7 +84,10 @@ document.addEventListener('DOMContentLoaded', () => {
         'React Playground': 'playground',
         'Electronics Store': 'electronics',
         'Barber.shop Booking': 'barber',
-        'Ayman Global Connect': 'ayman'
+        'Ayman Global Connect': 'ayman',
+        'Benefarm Fresh Exporters': 'benefarm',
+        'Change a Life': 'changealife',
+        'Academic Help Services': 'academichelp'
     };
     document.querySelectorAll('.project-card').forEach(card => {
         const name = card.querySelector('.project-name')?.textContent.trim();
