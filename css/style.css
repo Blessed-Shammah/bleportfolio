@@ -346,12 +346,13 @@ body, .navbar, .surface, .stat, .project-card, .skill-group,
     top: 90px;
 }
 .about-card img {
-    width: 130px; height: 130px;
-    border-radius: 50%;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
-    margin: 0 auto 1.1rem;
-    border: 3px solid var(--accent);
-    padding: 3px;
+    object-position: center top;
+    border-radius: var(--radius-sm);
+    margin: 0 0 1.1rem;
+    border: 1px solid var(--border);
 }
 .about-card h3 { font-family: var(--font-head); font-size: 1.3rem; }
 .about-role { color: var(--accent); font-size: 0.9rem; margin-bottom: 1.2rem; }
