@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study — Blessed Shammah</title>
+    <meta name="description" content="Project case study by Blessed Shammah — Full-Stack Developer & RFID Systems Architect.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        (function () {
+            var t = localStorage.getItem('theme');
+            if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <a class="nav-brand" href="index.html">BS<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle theme">
+            <span class="icon-moon">🌙</span><span class="icon-sun">☀️</span>
+        </button>
+    </nav>
+
+    <main class="cs-main" id="cs"></main>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Blessed Shammah</h3>
+            <p>Full-Stack Developer &amp; RFID Systems Architect — building production systems from Nairobi to the world.</p>
+            <p class="footer-copy">© 2026 Blessed Shammah. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/projects-data.js"></script>
+    <script>
+        (function () {
+            var id = new URLSearchParams(location.search).get('id');
+            var p = window.PROJECTS && window.PROJECTS[id];
+            var root = document.getElementById('cs');
+            var esc = function (s) {
+                return String(s).replace(/[&<>"']/g, function (c) {
+                    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+                });
+            };
+
+            if (!p) {
+                root.innerHTML =
+                    '<a class="cs-back" href="index.html#projects">← Back to projects</a>' +
+                    '<div class="cs-not-found"><h1 class="cs-title">Project not found</h1>' +
+                    '<p class="cs-lead">This case study doesn\'t exist yet. Head back to the portfolio to explore my work.</p>' +
+                    '<a class="btn btn-primary" href="index.html#projects">View all projects</a></div>';
+                return;
+            }
+
+            document.title = p.title + ' — Blessed Shammah';
+
+            var html = '<a class="cs-back" href="index.html#projects">← Back to projects</a>';
+            html += '<div class="cs-meta"><span class="cs-badge">' + esc(p.badge) + '</span>' +
+                    '<span class="cs-year">' + esc(p.year) + '</span></div>';
+            html += '<h1 class="cs-title">' + esc(p.title) + '</h1>';
+            html += '<p class="cs-lead">' + esc(p.lead) + '</p>';
+
+            html += '<div class="cs-tags">' +
+                    p.tags.map(function (t) { return '<span>' + esc(t) + '</span>'; }).join('') + '</div>';
+
+            if (p.metrics && p.metrics.length) {
+                html += '<div class="cs-metrics">' + p.metrics.map(function (m) {
+                    return '<div class="cs-metric"><strong>' + esc(m.value) + '</strong><span>' + esc(m.label) + '</span></div>';
+                }).join('') + '</div>';
+            }
+
+            p.blocks.forEach(function (b) {
+                html += '<section class="cs-block"><h2>' + esc(b.h) + '</h2>';
+                if (b.p) b.p.forEach(function (para) { html += '<p>' + esc(para) + '</p>'; });
+                if (b.list) {
+                    html += '<ul>' + b.list.map(function (li) { return '<li>' + esc(li) + '</li>'; }).join('') + '</ul>';
+                }
+                html += '</section>';
+            });
+
+            html += '<div class="cs-cta"><a class="btn btn-primary" href="index.html#contact">Work With Me</a>';
+            if (p.link) html += '<a class="btn btn-ghost" href="' + esc(p.link.url) + '" target="_blank" rel="noopener">' + esc(p.link.label) + '</a>';
+            html += '<a class="btn btn-ghost" href="index.html#projects">All Projects</a></div>';
+
+            root.innerHTML = html;
+        })();
+
+        document.getElementById('themeToggle')?.addEventListener('click', function () {
+            var root = document.documentElement;
+            var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            root.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        });
+    </script>
+</body>
+</html>

@@ -3,325 +3,290 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blessed Shammah - Software Engineer</title>
+    <title>Blessed Shammah — Full-Stack Developer & RFID Systems Architect</title>
+    <meta name="description" content="Blessed Shammah — Full-Stack Developer & RFID Systems Architect in Nairobi. 3+ years building enterprise systems, e-commerce platforms, and AI-powered tools with Laravel, Python, React, Flutter, and RFID hardware.">
+    <meta name="author" content="Blessed Shammah">
+    <meta property="og:title" content="Blessed Shammah — Full-Stack Developer & RFID Systems Architect">
+    <meta property="og:description" content="Enterprise systems, e-commerce platforms, and AI-powered tools shipped to production.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        // Apply saved theme before paint to avoid flash
+        (function () {
+            var t = localStorage.getItem('theme');
+            if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-brand">PORT.FOLIO</div>
+        <div class="nav-brand">BS<span>.</span></div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#certifications">Certifications</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="nav-social">
-            <a href="https://github.com/Blessed-Shammah"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 48 48">
-                <path fill="#fff" d="M41,24c0,9.4-7.6,17-17,17S7,33.4,7,24S14.6,7,24,7S41,14.6,41,24z"></path><path fill="#455a64" d="M21,41v-5.5c0-0.3,0.2-0.5,0.5-0.5s0.5,0.2,0.5,0.5V41h2v-6.5c0-0.3,0.2-0.5,0.5-0.5s0.5,0.2,0.5,0.5	V41h2v-5.5c0-0.3,0.2-0.5,0.5-0.5s0.5,0.2,0.5,0.5V41h1.8c0.2-0.3,0.2-0.6,0.2-1.1V36c0-2.2-1.9-5.2-4.3-5.2h-2.5	c-2.3,0-4.3,3.1-4.3,5.2v3.9c0,0.4,0.1,0.8,0.2,1.1H21L21,41z M40.1,26.4L40.1,26.4c0,0-1.3-0.4-2.4-0.4h-0.1	c-1.1,0-2.9,0.3-2.9,0.3c-0.1,0-0.1,0-0.1-0.1s0-0.1,0.1-0.1s2-0.3,3.1-0.3s2.4,0.4,2.5,0.4s0.1,0.1,0.1,0.2	C40.2,26.3,40.2,26.4,40.1,26.4z M39.8,27.2L39.8,27.2c0,0-1.4-0.4-2.6-0.4c-0.9,0-3,0.2-3.1,0.2S34,27,34,26.9s0-0.1,0.1-0.1	s2.2-0.2,3.1-0.2c1.3,0,2.6,0.4,2.6,0.4c0.1,0,0.1,0.1,0.1,0.2C39.9,27.1,39.9,27.2,39.8,27.2z M7.8,26.4c-0.1,0-0.1,0-0.1-0.1	s0-0.1,0.1-0.2c0.8-0.2,2.4-0.5,3.3-0.5c0.8,0,3.5,0.2,3.6,0.2s0.1,0.1,0.1,0.1c0,0.1-0.1,0.1-0.1,0.1s-2.7-0.2-3.5-0.2	C10.1,26,8.6,26.2,7.8,26.4L7.8,26.4z M8.2,27.9c0,0-0.1,0-0.1-0.1s0-0.1,0-0.2c0.1,0,1.4-0.8,2.9-1c1.3-0.2,4,0.1,4.2,0.1	c0.1,0,0.1,0.1,0.1,0.1c0,0.1-0.1,0.1-0.1,0.1l0,0c0,0-2.8-0.3-4.1-0.1C9.6,27.1,8.2,27.9,8.2,27.9L8.2,27.9z"></path><path fill="#455a64" d="M14.2,23.5c0-4.4,4.6-8.5,10.3-8.5s10.3,4,10.3,8.5S31.5,31,24.5,31S14.2,27.9,14.2,23.5z"></path><path fill="#455a64" d="M28.6,16.3c0,0,1.7-2.3,4.8-2.3c1.2,1.2,0.4,4.8,0,5.8L28.6,16.3z M20.4,16.3c0,0-1.7-2.3-4.8-2.3	c-1.2,1.2-0.4,4.8,0,5.8L20.4,16.3z M20.1,35.9c0,0-2.3,0-2.8,0c-1.2,0-2.3-0.5-2.8-1.5c-0.6-1.1-1.1-2.3-2.6-3.3	c-0.3-0.2-0.1-0.4,0.4-0.4c0.5,0.1,1.4,0.2,2.1,1.1c0.7,0.9,1.5,2,2.8,2s2.7,0,3.5-0.9L20.1,35.9z"></path><path fill="#00bcd4" d="M24,4C13,4,4,13,4,24s9,20,20,20s20-9,20-20S35,4,24,4z M24,40c-8.8,0-16-7.2-16-16S15.2,8,24,8	s16,7.2,16,16S32.8,40,24,40z"></path>
-                </svg></a>
-            <a href="https://wa.me/254796566475"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 48 48">
-                <path fill="#fff" d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"></path><path fill="#fff" d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"></path><path fill="#cfd8dc" d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"></path><path fill="#40c351" d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"></path><path fill="#fff" fill-rule="evenodd" d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z" clip-rule="evenodd"></path>
-                </svg></a>
-        </div>
-        <div class="nav-toggle">☰</div>
+        <a class="nav-cta" href="#contact">Let's Talk</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle theme">
+            <span class="icon-moon">🌙</span><span class="icon-sun">☀️</span>
+        </button>
+        <button class="nav-toggle" aria-label="Menu">&#9776;</button>
     </nav>
 
     <!-- Hero -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="animate-text">Hi, my name is</h1>
-            <h2 class="animate-text delay-1">Blessed Shammah</h2>
-            <p class="animate-text delay-2">I build exceptional digital experiences.</p>
-            <p class="animate-text delay-3">I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on automation with python and bot creation.</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="cta-btn">View My Work</a>
-                <a href="#contact" class="cta-btn secondary">Contact Me</a>
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-inner">
+            <p class="hero-eyebrow">Hi, I'm</p>
+            <h1 class="hero-title">Blessed Shammah</h1>
+            <p class="hero-tagline">Full-Stack Developer &amp; RFID Systems Architect</p>
+            <p class="hero-desc">I build enterprise systems, e-commerce platforms, and AI-powered tools that ship to production. With 3+ years as Lead Developer at Amband Limited, Founder of the AssetFlow RFID platform, and Co-Founder of the Chocheflani youth organization, I work fluently across Laravel, Python, React, Flutter, hardware/RFID integration, and AI/ML — while pursuing an MSc in Computer Science at the University of Nairobi.</p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="#projects">View My Work</a>
+                <a class="btn btn-ghost" href="#contact">Get In Touch</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat"><span class="stat-num">3+</span><span class="stat-label">Years Experience</span></div>
+                <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Production Platforms</span></div>
+                <div class="stat"><span class="stat-num">85%</span><span class="stat-label">Asset Visibility Gain</span></div>
+                <div class="stat"><span class="stat-num">1,000+</span><span class="stat-label">Assets Tracked</span></div>
             </div>
         </div>
-        <div class="scroll-down animate-text delay-4">Scroll Down <span>↓</span></div>
+        <div class="scroll-down">Scroll <span>&#8595;</span></div>
     </section>
 
     <!-- About -->
     <section id="about" class="section">
-        <h2>About Me</h2>
-        <div class="about-container animate-on-scroll">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-sub">Full-stack developer and technology entrepreneur turning hardware, data, and AI into systems that deliver measurable impact.</p>
+        <div class="about-grid animate-on-scroll">
             <div class="about-text">
-                <p>Hello! I’m a passionate software engineer with a love for creating clean, efficient, and user-friendly applications. My journey in software development began during my college years, and since then, I’ve been continuously learning and exploring new technologies.</p>
-                <p>I have a strong foundation in both frontend and backend development, with expertise in modern JavaScript frameworks, responsive design, and building scalable APIs. I’m committed to writing maintainable code and creating intuitive user experiences.</p>
-                <p>When I’m not coding, you can find me exploring the latest tech trends, creating web scrappers, bots, or solving algorithmic challenges to keep my problem-solving skills sharp.</p>
-                <a href="./assets/resume/resume.pdf" download class="resume-btn">Download Resume</a>
+                <p>I'm a full-stack developer and technology entrepreneur based in Nairobi, Kenya, with a passion for building software that solves real operational problems. My work spans enterprise platforms, e-commerce, mobile apps, and AI-driven tooling.</p>
+                <p>As Lead Developer at Amband Limited, I architect and build RFID asset-tracking systems deployed at institutions like Kibabii University and the Naivasha Sub-County Referral Hospital — giving organizations real-time visibility over thousands of physical assets.</p>
+                <p>Beyond engineering, I co-founded Chocheflani, a youth organization driving social impact in Mukuru kwa Njenga. I'm equally comfortable across the backend (Laravel, Python), frontend (React), mobile (Flutter, Android), and the AI/ML layer that ties modern products together.</p>
+                <a class="btn btn-primary" href="./assets/resume/resume.pdf" download>Download Résumé</a>
             </div>
-            <div class="about-image">
-                <img src="assets/images/profile.jpg" alt="Profile">
-                <h3>Software Engineer</h3>
-                <p>Passionate about building impactful applications</p>
+            <div class="about-card">
+                <img src="assets/images/profile.jpg" alt="Blessed Shammah">
+                <h3>Blessed Shammah</h3>
+                <p class="about-role">Full-Stack Developer &amp; RFID Systems Architect</p>
+                <ul class="about-facts">
+                    <li>📍 Nairobi, Kenya</li>
+                    <li>🎓 MSc Computer Science (UoN)</li>
+                    <li>💼 Lead Developer @ Amband Limited</li>
+                    <li>🏆 CodeForces Competitive Programmer</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <!-- Projects -->
     <section id="projects" class="section">
-        <h2>Projects</h2>
-        <p class="section-subtitle">A showcase of my recent projects, each representing the different skills and technologies I’ve mastered. These projects demonstrate my ability to deliver complete solutions from concept to deployment.</p>
-        
-        <div class="project-grid">
-            <div class="project-card animate-on-scroll">
-                <h3>Bakuusi Family Official Website</h3>
-                <p>Official Bakuusi Family Official Website with Admin Dashboard for Content management.</p>
-                <div class="project-tags">
-                    <span>HTML5/CSS</span>
-                    <span>PHP</span>
-                    <span>SQL</span>
-                    <span>JS</span>
-                </div>
-                <a href="https://blessed-shammah.github.io/bakuusi/index.html" class="project-link">View Details</a>
-            </div>
-            <div class="project-card animate-on-scroll delay-1">
-                <h3>National Parents Association</h3>
-                <p>Website for NPA, supports member registration and payments through MPESA</p>
-                <div class="project-tags">
-                    <span>React</span>
-                    <span>Supabase</span>
-                    <span>Vercel</span>
-                    <span>Daraja API</span>
-                </div>
-                <a href="https://nationalparentsassociation.vercel.app/" class="project-link">View Details</a>
-            </div>
-            <div class="project-card animate-on-scroll delay-2">
-                <h3>Crypto Merchant Bot</h3>
-                <p>BNB Crytpo seller bot for telegram.</p>
-                <div class="project-tags">
-                    <span>Python3</span>
-                    <span>Selenium</span>
-                    <span>Render</span>
-                </div>
-                <a href="http://t.me/bnbslapperbot" class="project-link">View Details</a>
-            </div>
-            <!-- Add more project cards as needed -->
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-sub">A selection of production systems, e-commerce platforms, and AI-powered tools I've designed, built, and shipped for clients across enterprise, healthcare, and trade.</p>
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="enterprise">Enterprise</button>
+            <button class="filter-btn" data-filter="web">Web &amp; E-commerce</button>
+            <button class="filter-btn" data-filter="ai">AI &amp; Automation</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
         </div>
-        <a href="https://github.com/Blessed-Shammah?tab=repositories" class="view-all-btn animate-on-scroll delay-3">View All Projects</a>
+        <div class="project-grid">
+            <article class="project-card animate-on-scroll" data-category="enterprise">
+                <div class="project-top"><span class="project-badge">Production</span><span class="project-year">2023–Present</span></div>
+                <h3 class="project-name">AssetFlow RFID Asset Tracking Platform</h3>
+                <p class="project-desc">A three-tier RFID asset tracking platform pairing a Laravel REST API, a Python Flask hardware middleware layer, and a native Android client built with Java and MVVM. Deployed in production at Kibabii University and Naivasha Sub-County Referral Hospital.</p>
+                <ul class="project-highlights">
+                    <li>Improved asset visibility by 85% across institutional clients</li>
+                    <li>Cut asset audit time from 2–3 weeks to 4–6 hours</li>
+                </ul>
+                <div class="project-tags"><span>Laravel</span><span>Python Flask</span><span>Android</span><span>MySQL</span><span>Honeywell RFID</span><span>Snipe-IT</span></div>
+                <div class="project-links"><a class="project-link" href="case-study.html?id=assetflow">Case Study →</a></div>
+            </article>
+            <article class="project-card animate-on-scroll" data-category="enterprise ai">
+                <div class="project-top"><span class="project-badge">Production</span><span class="project-year">2024–Present</span></div>
+                <h3 class="project-name">Cultiva Restaurant Inventory System</h3>
+                <p class="project-desc">An end-to-end inventory management system for a high-end restaurant, featuring barcode scanning, pantry tracking, delivery-note reconciliation, and an AI chatbot that acts as a virtual store manager.</p>
+                <ul class="project-highlights">
+                    <li>Reduced waste 35% and improved stock accuracy to 98%</li>
+                    <li>AI chatbot answers inventory queries in natural language</li>
+                </ul>
+                <div class="project-tags"><span>Laravel</span><span>Flutter</span><span>Barcode</span><span>AI Chatbot</span><span>Gemini</span></div>
+                <div class="project-links"><a class="project-link" href="case-study.html?id=cultiva">Case Study →</a></div>
+            </article>
+            <article class="project-card animate-on-scroll" data-category="web">
+                <div class="project-top"><span class="project-badge">Live</span><span class="project-year">2025–2026</span></div>
+                <h3 class="project-name">GlobalTradeIndiaExpo.com</h3>
+                <p class="project-desc">An international trade expo platform connecting 500+ exhibitors and 15,000+ buyers across 50+ countries for the August 2026 event in Greater Noida. Includes exhibitor registration, a hosted buyer program, 12 product zones, multi-language support, and full SEO.</p>
+                <ul class="project-highlights">
+                    <li>Serves 500+ exhibitors &amp; 15,000+ buyers</li>
+                    <li>Top Google rankings for trade-expo keywords</li>
+                </ul>
+                <div class="project-tags"><span>Full-Stack</span><span>SEO</span><span>Event System</span><span>Multi-language</span></div>
+                <div class="project-links"><a class="project-link" href="https://globaltradeindiaexpo.com" target="_blank" rel="noopener">Visit Site →</a></div>
+            </article>
+            <article class="project-card animate-on-scroll" data-category="web">
+                <div class="project-top"><span class="project-badge">Live</span><span class="project-year">2024–Present</span></div>
+                <h3 class="project-name">ScanTechInnovations.africa</h3>
+                <p class="project-desc">A medical equipment e-commerce platform for refurbished hospital equipment including MRI, CT, and mammography systems. Features a product catalog, inquiry management, M-Pesa and Razorpay payments, and English/Spanish localization.</p>
+                <ul class="project-highlights">
+                    <li>250% increase in qualified healthcare inquiries</li>
+                    <li>Integrated M-Pesa Daraja + Razorpay payments</li>
+                </ul>
+                <div class="project-tags"><span>E-commerce</span><span>SEO</span><span>M-Pesa</span><span>Razorpay</span></div>
+                <div class="project-links"><a class="project-link" href="https://scantechinnovations.africa" target="_blank" rel="noopener">Visit Site →</a></div>
+            </article>
+            <article class="project-card animate-on-scroll" data-category="ai">
+                <div class="project-top"><span class="project-badge">Project</span><span class="project-year">2024</span></div>
+                <h3 class="project-name">AI-Powered Customer Service Chatbot</h3>
+                <p class="project-desc">A context-aware support assistant built with LangChain, Google Gemini Flash, and FastAPI. A RAG pipeline backed by a vector database grounds responses in company documentation for accurate, source-driven answers.</p>
+                <ul class="project-highlights">
+                    <li>RAG pipeline over company knowledge base</li>
+                    <li>Natural-language support automation</li>
+                </ul>
+                <div class="project-tags"><span>Python</span><span>LangChain</span><span>Gemini</span><span>FastAPI</span><span>RAG</span></div>
+                <div class="project-links"><a class="project-link" href="case-study.html?id=chatbot">Case Study →</a></div>
+            </article>
+            <article class="project-card animate-on-scroll" data-category="enterprise">
+                <div class="project-top"><span class="project-badge">Prototype</span><span class="project-year">2024</span></div>
+                <h3 class="project-name">Safaricom RFID Network Scanner</h3>
+                <p class="project-desc">A passive RFID scanner prototype for telecom infrastructure monitoring, integrated with Safaricom's network management systems to track and verify equipment across sites.</p>
+                <ul class="project-highlights">
+                    <li>Centralized monitoring across network sites</li>
+                    <li>Automated equipment verification &amp; alerts</li>
+                </ul>
+                <div class="project-tags"><span>RFID</span><span>Telecom</span><span>Python</span><span>Hardware</span></div>
+                <div class="project-links"><a class="project-link" href="case-study.html?id=safaricom">Learn More →</a></div>
+            </article>
+            <article class="project-card animate-on-scroll" data-category="enterprise">
+                <div class="project-top"><span class="project-badge">Proposal</span><span class="project-year">2025</span></div>
+                <h3 class="project-name">UNICEF Uganda RFID Asset Tracking</h3>
+                <p class="project-desc">A technical proposal (RFP LRPS-2026-9202757) for the UNICEF/WFP Common Premises in Kampala, covering 455 furniture assets, 10 meeting rooms, and 13 door portals with a cloud dashboard built to UN compliance standards.</p>
+                <ul class="project-highlights">
+                    <li>455 assets across 13 RFID door portals</li>
+                    <li>Cloud dashboard w/ automated movement detection</li>
+                </ul>
+                <div class="project-tags"><span>RFID</span><span>Enterprise</span><span>Cloud</span><span>UN Standards</span></div>
+                <div class="project-links"><a class="project-link" href="case-study.html?id=unicef">View Proposal →</a></div>
+            </article>
+            <article class="project-card animate-on-scroll" data-category="web">
+                <div class="project-top"><span class="project-badge">Live</span><span class="project-year">2024</span></div>
+                <h3 class="project-name">National Parents Association</h3>
+                <p class="project-desc">A member registration and payments platform enabling parents to sign up online and settle dues through integrated M-Pesa mobile payments.</p>
+                <ul class="project-highlights">
+                    <li>Online member registration &amp; dues</li>
+                    <li>M-Pesa Daraja payment integration</li>
+                </ul>
+                <div class="project-tags"><span>React</span><span>Supabase</span><span>Vercel</span><span>Daraja API</span></div>
+                <div class="project-links"><a class="project-link" href="https://nationalparentsassociation.vercel.app/" target="_blank" rel="noopener">Visit Site →</a></div>
+            </article>
+            <article class="project-card animate-on-scroll" data-category="mobile">
+                <div class="project-top"><span class="project-badge">Project</span><span class="project-year">2024</span></div>
+                <h3 class="project-name">TREQ B2B Trade App</h3>
+                <p class="project-desc">A cross-platform React Native app that connects buyers and exporters, with real-time chat and push notifications to power B2B matching on the go.</p>
+                <ul class="project-highlights">
+                    <li>Real-time buyer–exporter chat</li>
+                    <li>Push notifications &amp; B2B matching</li>
+                </ul>
+                <div class="project-tags"><span>React Native</span><span>TypeScript</span><span>Expo</span></div>
+                <div class="project-links"><a class="project-link" href="case-study.html?id=treq">Learn More →</a></div>
+            </article>
+            <article class="project-card animate-on-scroll" data-category="ai">
+                <div class="project-top"><span class="project-badge">Live</span><span class="project-year">2024</span></div>
+                <h3 class="project-name">Crypto Merchant Bot</h3>
+                <p class="project-desc">A BNB crypto-seller Telegram bot that automates sales end to end, using Selenium browser automation to handle transactions directly within chat.</p>
+                <ul class="project-highlights">
+                    <li>Automated BNB sales via Telegram</li>
+                    <li>Selenium browser automation</li>
+                </ul>
+                <div class="project-tags"><span>Python</span><span>Selenium</span><span>Render</span><span>Telegram</span></div>
+                <div class="project-links"><a class="project-link" href="http://t.me/bnbslapperbot" target="_blank" rel="noopener">View Bot →</a></div>
+            </article>
+        </div>
+        <a href="https://github.com/Blessed-Shammah?tab=repositories" class="view-all-btn" target="_blank" rel="noopener">View All on GitHub →</a>
     </section>
 
     <!-- Skills -->
     <section id="skills" class="section">
-        <h2>Skills</h2>
-        <p class="section-subtitle">My technical proficiency spans various languages, frameworks, and tools. I continuously expand my skillset to stay current with industry trends and best practices.</p>
-        <div class="skills-container animate-on-scroll">
-            <div class="skill-category">
-                <h3>Programming Languages</h3>
-                <div class="skill-item">
-                    <span>JavaScript</span>
-                    <div class="skill-bar"><div style="width: 80%;"></div></div>
-                    <span>80%</span>
-                </div>
-                <div class="skill-item">
-                    <span>TypeScript</span>
-                    <div class="skill-bar"><div style="width: 70%;"></div></div>
-                    <span>70%</span>
-                </div>
-                <div class="skill-item">
-                    <span>Python</span>
-                    <div class="skill-bar"><div style="width: 95%;"></div></div>
-                    <span>95%</span>
-                </div>
-                <div class="skill-item">
-                    <span>Java</span>
-                    <div class="skill-bar"><div style="width: 75%;"></div></div>
-                    <span>75%</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>Frontend Development</h3>
-                <div class="skill-item">
-                    <span>React</span>
-                    <div class="skill-bar"><div style="width: 95%;"></div></div>
-                    <span>95%</span>
-                </div>
-                <div class="skill-item">
-                    <span>Next.js</span>
-                    <div class="skill-bar"><div style="width: 80%;"></div></div>
-                    <span>80%</span>
-                </div>
-                <div class="skill-item">
-                    <span>HTML5/CSS3</span>
-                    <div class="skill-bar"><div style="width: 90%;"></div></div>
-                    <span>90%</span>
-                </div>
-                <div class="skill-item">
-                    <span>Tailwind CSS</span>
-                    <div class="skill-bar"><div style="width: 85%;"></div></div>
-                    <span>85%</span>
-                </div>
-                <div class="skill-item">
-                    <span>Redux</span>
-                    <div class="skill-bar"><div style="width: 80%;"></div></div>
-                    <span>80%</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>Backend Development</h3>
-                <div class="skill-item">
-                    <span>Node.js</span>
-                    <div class="skill-bar"><div style="width: 85%;"></div></div>
-                    <span>85%</span>
-                </div>
-                <div class="skill-item">
-                    <span>Express</span>
-                    <div class="skill-bar"><div style="width: 80%;"></div></div>
-                    <span>80%</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>Database & DevOps</h3>
-                <div class="skill-item">
-                    <span>MongoDB</span>
-                    <div class="skill-bar"><div style="width: 55%;"></div></div>
-                    <span>55%</span>
-                </div>
-                <div class="skill-item">
-                    <span>PostgreSQL</span>
-                    <div class="skill-bar"><div style="width: 70%;"></div></div>
-                    <span>70%</span>
-                </div>
-                <div class="skill-item">
-                    <span>CI/CD</span>
-                    <div class="skill-bar"><div style="width: 95%;"></div></div>
-                    <span>95%</span>
-                </div>
-            </div>
-        </div>
-        <div class="other-skills animate-on-scroll delay-1">
-            <h3>Other Skills & Tools</h3>
-            <div class="skill-tags">
-                <span>Git</span>
-                <span>Selenium</span>
-                <span>Figma</span>
-                <span>Agile/Scrum</span>
-                <span>RESTful APIs</span>
-                <span>Microservices</span>
-                <span>Responsive Design</span>
-                <span>Vercel</span>
-                <span>Render</span>
-                <span>Automation</span>
-            </div>
+        <h2 class="section-title">Skills &amp; Technologies</h2>
+        <p class="section-sub">A full-stack toolkit spanning backend systems, modern frontends, mobile apps, AI integration, and the hardware and infrastructure that ties it all together.</p>
+        <div class="skills-grid">
+            <div class="skill-group animate-on-scroll"><h3>Backend</h3><div class="chip-row"><span class="chip">PHP</span><span class="chip">Laravel</span><span class="chip">Python</span><span class="chip">Flask</span><span class="chip">FastAPI</span><span class="chip">Django</span><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">REST</span><span class="chip">GraphQL</span><span class="chip">WebSockets</span></div></div>
+            <div class="skill-group animate-on-scroll"><h3>Frontend</h3><div class="chip-row"><span class="chip">React</span><span class="chip">React Native</span><span class="chip">Vue.js</span><span class="chip">TypeScript</span><span class="chip">JavaScript</span><span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">Tailwind</span><span class="chip">Bootstrap</span></div></div>
+            <div class="skill-group animate-on-scroll"><h3>Mobile</h3><div class="chip-row"><span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">Android (Java/Kotlin)</span><span class="chip">MVVM</span><span class="chip">Retrofit</span><span class="chip">M-Pesa</span><span class="chip">Razorpay</span></div></div>
+            <div class="skill-group animate-on-scroll"><h3>AI &amp; ML</h3><div class="chip-row"><span class="chip">LangChain</span><span class="chip">Google Gemini</span><span class="chip">Claude API</span><span class="chip">RAG</span><span class="chip">NLP</span><span class="chip">Prompt Engineering</span></div></div>
+            <div class="skill-group animate-on-scroll"><h3>Databases</h3><div class="chip-row"><span class="chip">MySQL</span><span class="chip">PostgreSQL</span><span class="chip">SQLite</span><span class="chip">MongoDB</span><span class="chip">Redis</span></div></div>
+            <div class="skill-group animate-on-scroll"><h3>Hardware &amp; RFID</h3><div class="chip-row"><span class="chip">Passive UHF RFID</span><span class="chip">Honeywell IH25/EDA52</span><span class="chip">Barcode Scanners</span><span class="chip">SDK Integration</span></div></div>
+            <div class="skill-group animate-on-scroll"><h3>DevOps &amp; Cloud</h3><div class="chip-row"><span class="chip">Docker</span><span class="chip">Git</span><span class="chip">CI/CD</span><span class="chip">Linux</span><span class="chip">AWS</span><span class="chip">DigitalOcean</span><span class="chip">Contabo VPS</span></div></div>
         </div>
     </section>
 
     <!-- Experience -->
     <section id="experience" class="section">
-        <h2>Experience</h2>
-        <p class="section-subtitle">My professional journey has equipped me with diverse experience across different roles and environments.</p>
-        <div class="exp-timeline">
-            <div class="exp-item animate-on-scroll">
-                <div class="exp-company">Kibabii University</div>
-                <div class="exp-details">
-                    <h3>IT Support Volunteer</h3>
-                    <p class="exp-meta">Kibabii University | Jan 2023 – Sep 2023 | On-Site</p>
-                    <ul>
-                        <li>Assisted in technical support operations</li>
-                        <li>Helped maintain university IT systems</li>
-                        <li>Supported user technical needs</li>
-                        <li>Mentored junior attachees through attachment period.</li>
-                    </ul>
-                </div>
-                <div class="exp-company">Naivasha Sub-county Referral Hospital</div>
-                <div class="exp-details">
-                    <h3>IT Support Attachee</h3>
-                    <p class="exp-meta">Naivasha Sub-county Referral Hospital | Sep 2022 – Dec 2022 | On-Site</p>
-                    <ul>
-                        <li>Provided technical support for hospital systems</li>
-                        <li>Assisted in maintaining IT infrastructure</li>
-                        <li>Supported staff with technical issues</li>
-                    </ul>
-                </div>
-            </div>
+        <h2 class="section-title">Experience</h2>
+        <p class="section-sub">From enterprise RFID architecture to community tech leadership — a track record of shipping production systems that solve real problems.</p>
+        <div class="timeline">
+            <div class="timeline-item animate-on-scroll"><div class="timeline-dot"></div><div class="timeline-content"><span class="timeline-date">Jan 2023 – Present</span><h3>Lead Developer &amp; RFID Systems Architect</h3><span class="timeline-org">Amband Limited · Nairobi</span><ul><li>Founded &amp; architected AssetFlow, the company's flagship RFID asset-tracking platform, concept to enterprise deployment.</li><li>Built Cultiva restaurant inventory system with an AI store-manager chatbot.</li><li>Managed Dockerized production on Contabo VPS with 99.9% uptime.</li><li>Submitted UNICEF Uganda RFID RFP (LRPS-2026-9202757).</li></ul></div></div>
+            <div class="timeline-item animate-on-scroll"><div class="timeline-dot"></div><div class="timeline-content"><span class="timeline-date">2022 – Present</span><h3>Co-Founder &amp; Technology Lead</h3><span class="timeline-org">Chocheflani Youth Organization · Mukuru kwa Njenga, Nairobi</span><ul><li>Lead tech strategy &amp; digital outreach for youth empowerment in an informal settlement.</li><li>Deliver technical training &amp; mentorship bridging the digital access gap.</li></ul></div></div>
+            <div class="timeline-item animate-on-scroll"><div class="timeline-dot"></div><div class="timeline-content"><span class="timeline-date">2023 – Present</span><h3>Freelance Full-Stack Developer</h3><span class="timeline-org">Various Clients · Nairobi &amp; International</span><ul><li>Built GlobalTradeIndiaExpo.com (500+ exhibitors, 15,000+ buyers) &amp; ScanTechInnovations.africa medical marketplace.</li><li>Delivered SEO driving 200%+ organic traffic growth and first-page rankings.</li></ul></div></div>
+            <div class="timeline-item animate-on-scroll"><div class="timeline-dot"></div><div class="timeline-content"><span class="timeline-date">Jan 2023 – Sep 2023</span><h3>Information Technologist</h3><span class="timeline-org">Kibabii University · Bungoma</span><ul><li>Built automated solutions for 500+ staff &amp; students, improving response times 60%.</li><li>Authored API &amp; workflow technical documentation.</li></ul></div></div>
+            <div class="timeline-item animate-on-scroll"><div class="timeline-dot"></div><div class="timeline-content"><span class="timeline-date">Oct 2022 – Dec 2022</span><h3>ICT Specialist</h3><span class="timeline-org">Naivasha Sub-County Referral Hospital · Naivasha</span><ul><li>Maintained healthcare network for 200+ workstations at 99.9% uptime.</li><li>Implemented monitoring &amp; backup safeguarding patient data.</li></ul></div></div>
         </div>
     </section>
 
-    <!-- Certificates -->
-    <section id="certificates" class="section">
-        <h2>Certificates</h2>
-        <p class="section-subtitle">Professional certificates that validate my expertise in various technologies and methodologies.</p>
-        <div class="cert-container">
-            <div class="cert-card animate-on-scroll">
-                <h3>BCs. Information Technology</h3>
-                <p class="cert-meta">Kibabii University | Dec 2023</p>
-                <p>For succesful completion of BCs. IT</p>
-                <div class="cert-skills">
-                    <span>Website Development</span>
-                    <span>Technical IT Support</span>
-                    <span>Network Managment</span>
-                    <span>Programming</span>
-                </div>
-                <a href="./assets/cirtificates/IT_Cirt_Ble.pdf" class="cert-link">View Certificate</a>
-            </div>
-            <!-- Add more cert cards -->
-            
-        </div>
-        <div class="cert-nav animate-on-scroll delay-1">
-            <span>1 / 5</span>
-            <button class="nav-arrow">←</button>
-            <button class="nav-arrow">→</button>
-        </div>
-        <div class="cert-dots animate-on-scroll delay-2">
-            <span class="dot active"></span>
+    <!-- Certifications -->
+    <section id="certifications" class="section">
+        <h2 class="section-title">Certifications &amp; Education</h2>
+        <p class="section-sub">Formal academic grounding paired with continuous, hands-on learning across AI, data, and security.</p>
+        <div class="cert-grid">
+            <div class="cert-card animate-on-scroll"><h3>MSc Computer Science</h3><span class="cert-org">University of Nairobi · Expected 2028</span><p>Advanced algorithms, distributed systems, ML, software architecture.</p></div>
+            <div class="cert-card animate-on-scroll"><h3>BSc Information Technology</h3><span class="cert-org">Kibabii University · 2023</span><p>GPA 3.5/4.0; research recognition in technology automation.</p><a class="cert-link" href="./assets/cirtificates/IT_Cirt_Ble.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
+            <div class="cert-card animate-on-scroll"><h3>Power Learn Project — Software Engineering (Cohort VII)</h3><span class="cert-org">2025</span><p>Advanced AI for Software Engineering: AI-assisted development, prompt engineering, Claude Code.</p></div>
+            <div class="cert-card animate-on-scroll"><h3>Python for Data Analysis &amp; Automation</h3><span class="cert-org">Coursera</span><p>Pandas, Plotly, ETL pipelines.</p></div>
+            <div class="cert-card animate-on-scroll"><h3>Health Information Systems Security</h3><span class="cert-org">Ministry of Health</span><p>HIPAA, patient-data protection, hospital information systems.</p></div>
+            <div class="cert-card animate-on-scroll"><h3>CodeForces Competitive Programming</h3><span class="cert-org">Algorithm Sniper</span><p>Top-ranking; data structures, dynamic programming, algorithm optimization.</p></div>
         </div>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="section">
-        <h2>Contact Me</h2>
-        <p class="section-subtitle">Let’s connect! Whether you have a job opportunity, project idea, or just want to say hello, I’d love to hear from you. Feel free to reach out.</p>
-        <div class="contact-container animate-on-scroll">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-sub">Open to full-time roles, contracts, and collaborations. Let's build something.</p>
+        <div class="contact-grid animate-on-scroll">
             <div class="contact-info">
-                <h3>Get In Touch</h3>
-                <p><span>📧</span> Email: iamblessedshammah@gmail.com</p>
-                <p><span>📞</span> Phone: (079) 656-6475</p>
-                <p><span>📍</span> Location: Nairobi, KE</p>
-                <div class="contact-social">
-                    <h4>Social Profiles</h4>
-                    <a href="https://github.com/Blessed-Shammah"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 48 48">
-                        <path fill="#fff" d="M41,24c0,9.4-7.6,17-17,17S7,33.4,7,24S14.6,7,24,7S41,14.6,41,24z"></path><path fill="#455a64" d="M21,41v-5.5c0-0.3,0.2-0.5,0.5-0.5s0.5,0.2,0.5,0.5V41h2v-6.5c0-0.3,0.2-0.5,0.5-0.5s0.5,0.2,0.5,0.5	V41h2v-5.5c0-0.3,0.2-0.5,0.5-0.5s0.5,0.2,0.5,0.5V41h1.8c0.2-0.3,0.2-0.6,0.2-1.1V36c0-2.2-1.9-5.2-4.3-5.2h-2.5	c-2.3,0-4.3,3.1-4.3,5.2v3.9c0,0.4,0.1,0.8,0.2,1.1H21L21,41z M40.1,26.4L40.1,26.4c0,0-1.3-0.4-2.4-0.4h-0.1	c-1.1,0-2.9,0.3-2.9,0.3c-0.1,0-0.1,0-0.1-0.1s0-0.1,0.1-0.1s2-0.3,3.1-0.3s2.4,0.4,2.5,0.4s0.1,0.1,0.1,0.2	C40.2,26.3,40.2,26.4,40.1,26.4z M39.8,27.2L39.8,27.2c0,0-1.4-0.4-2.6-0.4c-0.9,0-3,0.2-3.1,0.2S34,27,34,26.9s0-0.1,0.1-0.1	s2.2-0.2,3.1-0.2c1.3,0,2.6,0.4,2.6,0.4c0.1,0,0.1,0.1,0.1,0.2C39.9,27.1,39.9,27.2,39.8,27.2z M7.8,26.4c-0.1,0-0.1,0-0.1-0.1	s0-0.1,0.1-0.2c0.8-0.2,2.4-0.5,3.3-0.5c0.8,0,3.5,0.2,3.6,0.2s0.1,0.1,0.1,0.1c0,0.1-0.1,0.1-0.1,0.1s-2.7-0.2-3.5-0.2	C10.1,26,8.6,26.2,7.8,26.4L7.8,26.4z M8.2,27.9c0,0-0.1,0-0.1-0.1s0-0.1,0-0.2c0.1,0,1.4-0.8,2.9-1c1.3-0.2,4,0.1,4.2,0.1	c0.1,0,0.1,0.1,0.1,0.1c0,0.1-0.1,0.1-0.1,0.1l0,0c0,0-2.8-0.3-4.1-0.1C9.6,27.1,8.2,27.9,8.2,27.9L8.2,27.9z"></path><path fill="#455a64" d="M14.2,23.5c0-4.4,4.6-8.5,10.3-8.5s10.3,4,10.3,8.5S31.5,31,24.5,31S14.2,27.9,14.2,23.5z"></path><path fill="#455a64" d="M28.6,16.3c0,0,1.7-2.3,4.8-2.3c1.2,1.2,0.4,4.8,0,5.8L28.6,16.3z M20.4,16.3c0,0-1.7-2.3-4.8-2.3	c-1.2,1.2-0.4,4.8,0,5.8L20.4,16.3z M20.1,35.9c0,0-2.3,0-2.8,0c-1.2,0-2.3-0.5-2.8-1.5c-0.6-1.1-1.1-2.3-2.6-3.3	c-0.3-0.2-0.1-0.4,0.4-0.4c0.5,0.1,1.4,0.2,2.1,1.1c0.7,0.9,1.5,2,2.8,2s2.7,0,3.5-0.9L20.1,35.9z"></path><path fill="#00bcd4" d="M24,4C13,4,4,13,4,24s9,20,20,20s20-9,20-20S35,4,24,4z M24,40c-8.8,0-16-7.2-16-16S15.2,8,24,8	s16,7.2,16,16S32.8,40,24,40z"></path>
-                        </svg></a>
-                    <a href="https://wa.me/254796566475"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 48 48">
-                        <path fill="#fff" d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"></path><path fill="#fff" d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"></path><path fill="#cfd8dc" d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"></path><path fill="#40c351" d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"></path><path fill="#fff" fill-rule="evenodd" d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z" clip-rule="evenodd"></path>
-                        </svg></a>
+                <a class="contact-item" href="mailto:iamblessedshammah@gmail.com"><span class="contact-icon">📧</span> iamblessedshammah@gmail.com</a>
+                <a class="contact-item" href="tel:+254717048047"><span class="contact-icon">📞</span> +254 717 048 047</a>
+                <a class="contact-item" href="#"><span class="contact-icon">📍</span> Nairobi, Kenya</a>
+                <div class="contact-socials">
+                    <a class="social-chip" href="https://github.com/Blessed-Shammah" target="_blank" rel="noopener">GitHub</a>
+                    <a class="social-chip" href="https://wa.me/254717048047" target="_blank" rel="noopener">WhatsApp</a>
+                    <a class="social-chip" href="mailto:iamblessedshammah@gmail.com">Email</a>
                 </div>
             </div>
-            <div class="contact-form">
-                <h3>Send Me a Message</h3>
-                <form action="mailto:iamblessedshammah@gmail.com" method="post" enctype="text/plain">
-                    <div class="form-row">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <input type="text" placeholder="Subject" required>
-                    <textarea placeholder="Message" required></textarea>
-                    <button type="submit" class="cta-btn">Send Message ✈️</button>
-                </form>
-            </div>
+            <form class="contact-form" action="mailto:iamblessedshammah@gmail.com" method="post" enctype="text/plain">
+                <div class="form-row"><input type="text" placeholder="Your Name" required><input type="email" placeholder="Your Email" required></div>
+                <input type="text" placeholder="Subject" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <h3>PORT.FOLIO</h3>
-            <p>Crafting exceptional digital experiences</p>
-            <p>© 2025 Developer Portfolio. All rights reserved.</p>
-            <p>Designed & Built with 💖</p>
-        </div>
-        <div class="footer-social">
-            <a href="https://github.com/Blessed-Shammah"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 48 48">
-                <path fill="#fff" d="M41,24c0,9.4-7.6,17-17,17S7,33.4,7,24S14.6,7,24,7S41,14.6,41,24z"></path><path fill="#455a64" d="M21,41v-5.5c0-0.3,0.2-0.5,0.5-0.5s0.5,0.2,0.5,0.5V41h2v-6.5c0-0.3,0.2-0.5,0.5-0.5s0.5,0.2,0.5,0.5	V41h2v-5.5c0-0.3,0.2-0.5,0.5-0.5s0.5,0.2,0.5,0.5V41h1.8c0.2-0.3,0.2-0.6,0.2-1.1V36c0-2.2-1.9-5.2-4.3-5.2h-2.5	c-2.3,0-4.3,3.1-4.3,5.2v3.9c0,0.4,0.1,0.8,0.2,1.1H21L21,41z M40.1,26.4L40.1,26.4c0,0-1.3-0.4-2.4-0.4h-0.1	c-1.1,0-2.9,0.3-2.9,0.3c-0.1,0-0.1,0-0.1-0.1s0-0.1,0.1-0.1s2-0.3,3.1-0.3s2.4,0.4,2.5,0.4s0.1,0.1,0.1,0.2	C40.2,26.3,40.2,26.4,40.1,26.4z M39.8,27.2L39.8,27.2c0,0-1.4-0.4-2.6-0.4c-0.9,0-3,0.2-3.1,0.2S34,27,34,26.9s0-0.1,0.1-0.1	s2.2-0.2,3.1-0.2c1.3,0,2.6,0.4,2.6,0.4c0.1,0,0.1,0.1,0.1,0.2C39.9,27.1,39.9,27.2,39.8,27.2z M7.8,26.4c-0.1,0-0.1,0-0.1-0.1	s0-0.1,0.1-0.2c0.8-0.2,2.4-0.5,3.3-0.5c0.8,0,3.5,0.2,3.6,0.2s0.1,0.1,0.1,0.1c0,0.1-0.1,0.1-0.1,0.1s-2.7-0.2-3.5-0.2	C10.1,26,8.6,26.2,7.8,26.4L7.8,26.4z M8.2,27.9c0,0-0.1,0-0.1-0.1s0-0.1,0-0.2c0.1,0,1.4-0.8,2.9-1c1.3-0.2,4,0.1,4.2,0.1	c0.1,0,0.1,0.1,0.1,0.1c0,0.1-0.1,0.1-0.1,0.1l0,0c0,0-2.8-0.3-4.1-0.1C9.6,27.1,8.2,27.9,8.2,27.9L8.2,27.9z"></path><path fill="#455a64" d="M14.2,23.5c0-4.4,4.6-8.5,10.3-8.5s10.3,4,10.3,8.5S31.5,31,24.5,31S14.2,27.9,14.2,23.5z"></path><path fill="#455a64" d="M28.6,16.3c0,0,1.7-2.3,4.8-2.3c1.2,1.2,0.4,4.8,0,5.8L28.6,16.3z M20.4,16.3c0,0-1.7-2.3-4.8-2.3	c-1.2,1.2-0.4,4.8,0,5.8L20.4,16.3z M20.1,35.9c0,0-2.3,0-2.8,0c-1.2,0-2.3-0.5-2.8-1.5c-0.6-1.1-1.1-2.3-2.6-3.3	c-0.3-0.2-0.1-0.4,0.4-0.4c0.5,0.1,1.4,0.2,2.1,1.1c0.7,0.9,1.5,2,2.8,2s2.7,0,3.5-0.9L20.1,35.9z"></path><path fill="#00bcd4" d="M24,4C13,4,4,13,4,24s9,20,20,20s20-9,20-20S35,4,24,4z M24,40c-8.8,0-16-7.2-16-16S15.2,8,24,8	s16,7.2,16,16S32.8,40,24,40z"></path>
-                </svg></a>
-            <a href="https://wa.me/254796566475"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 48 48">
-                <path fill="#fff" d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"></path><path fill="#fff" d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"></path><path fill="#cfd8dc" d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"></path><path fill="#40c351" d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"></path><path fill="#fff" fill-rule="evenodd" d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z" clip-rule="evenodd"></path>
-                </svg></a>
+            <h3>Blessed Shammah</h3>
+            <p>Full-Stack Developer &amp; RFID Systems Architect — building production systems from Nairobi to the world.</p>
+            <p class="footer-copy">© 2026 Blessed Shammah. All rights reserved.</p>
         </div>
     </footer>
 
