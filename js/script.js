@@ -4,16 +4,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const navToggle = document.querySelector('.nav-toggle');
 
     /* ---- Mobile nav toggle ---- */
-    navToggle?.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
-        navToggle.innerHTML = navLinks.classList.contains('open') ? '&times;' : '&#9776;';
-    });
+    // Backdrop scrim that dims the page while the drawer is open.
+    const scrim = document.createElement('div');
+    scrim.className = 'nav-scrim';
+    document.body.appendChild(scrim);
+
+    const setMenu = (open) => {
+        navLinks.classList.toggle('open', open);
+        scrim.classList.toggle('show', open);
+        document.body.classList.toggle('nav-open', open);
+        navToggle.innerHTML = open ? '&times;' : '&#9776;';
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+
+    navToggle?.addEventListener('click', () =>
+        setMenu(!navLinks.classList.contains('open')));
+    scrim.addEventListener('click', () => setMenu(false));
     navLinks?.querySelectorAll('a').forEach(a =>
-        a.addEventListener('click', () => {
-            navLinks.classList.remove('open');
-            navToggle.innerHTML = '&#9776;';
-        })
-    );
+        a.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') setMenu(false);
+    });
 
     /* ---- Theme toggle ---- */
     const themeToggle = document.getElementById('themeToggle');
