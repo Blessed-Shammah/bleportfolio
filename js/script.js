@@ -207,11 +207,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const hasComma = numStr.includes(',');
         const prefix = text.slice(0, match.index);
         const suffix = text.slice(match.index + numStr.length);
-        const duration = 1400;
+        const duration = 2000;
         const start = performance.now();
         const step = (now) => {
             const p = Math.min((now - start) / duration, 1);
-            const eased = 1 - Math.pow(1 - p, 3); // easeOutCubic
+            // Near-linear with a gentle ease-out tail so every integer is visible
+            // (a strong ease-out hits the final value too early on small numbers).
+            const eased = 1 - Math.pow(1 - p, 1.6);
             const val = Math.round(target * eased);
             el.textContent = prefix + (hasComma ? val.toLocaleString('en-US') : val) + suffix;
             if (p < 1) requestAnimationFrame(step);
@@ -225,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 statObserver.unobserve(e.target);
             }
         });
-    }, { threshold: 0.6 });
+    }, { threshold: 0.35 });
     document.querySelectorAll('.stat-num').forEach(el => statObserver.observe(el));
 
     /* ---- Footer year ---- */
