@@ -538,7 +538,7 @@
             <!-- Formspree endpoint -->
             <form class="contact-form" id="contactForm" action="https://formspree.io/f/mdajvnbp" method="POST">
                 <div class="form-row"><input type="text" name="name" placeholder="Your Name" required><input type="email" name="email" placeholder="Your Email" required></div>
-                <input type="text" name="subject" placeholder="Subject" required>
+                <div class="form-row"><input type="tel" name="phone" placeholder="Your Phone (e.g. +254…)"><input type="text" name="subject" placeholder="Subject" required></div>
                 <textarea name="message" placeholder="Message" required></textarea>
                 <button type="submit" class="btn btn-primary">Send Message</button>
                 <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
