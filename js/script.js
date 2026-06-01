@@ -186,6 +186,37 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    /* ---- Animated count-up for hero stats ---- */
+    const countUp = (el) => {
+        const text = el.textContent.trim();
+        const match = text.match(/[\d,]+(?:\.\d+)?/);
+        if (!match) return;
+        const numStr = match[0];
+        const target = parseFloat(numStr.replace(/,/g, ''));
+        const hasComma = numStr.includes(',');
+        const prefix = text.slice(0, match.index);
+        const suffix = text.slice(match.index + numStr.length);
+        const duration = 1400;
+        const start = performance.now();
+        const step = (now) => {
+            const p = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - p, 3); // easeOutCubic
+            const val = Math.round(target * eased);
+            el.textContent = prefix + (hasComma ? val.toLocaleString('en-US') : val) + suffix;
+            if (p < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+    };
+    const statObserver = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                countUp(e.target);
+                statObserver.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.6 });
+    document.querySelectorAll('.stat-num').forEach(el => statObserver.observe(el));
+
     /* ---- Footer year ---- */
     const yr = document.querySelector('.footer-copy');
     if (yr) yr.textContent = `© ${new Date().getFullYear()} Blessed Shammah. All rights reserved.`;
